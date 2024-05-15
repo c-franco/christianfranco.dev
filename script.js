@@ -33,5 +33,7 @@ function showHideMenu() {
 
 function selectMenuItem() {
   document.getElementById("nav").classList = "";
+  let checkbox = document.getElementById("menu-toggle");
+  checkbox.checked = false;
   menuVisible = false;
 }

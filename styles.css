@@ -15,7 +15,7 @@ html {
 :root {
   --bg-primary-color: white;
   --bg-second-color: #fafafa;
-  --contrast-color: #111;
+  --contrast-color: #334155;
   --detail-color: #7843e9;
   --fade-color: #7843e952;
 }
@@ -75,7 +75,7 @@ html {
   font-family: Onest, sans-serif;
   letter-spacing: 1px;
   font-weight: 500;
-  color: rgb(51 65 85);
+  color: var(--contrast-color);
   padding: 3px;
 }
 
@@ -84,7 +84,8 @@ html {
   cursor: pointer;
 }
 
-.nav-responsive {
+.nav-responsive,
+.hamburger-menu {
   display: none;
 }
 
@@ -120,9 +121,60 @@ html {
   transition-timing-function: ease-out;
 }
 
-.underline:hover:before, .underline:focus:before, .underline:active:before {
+.underline:hover:before,
+.underline:focus:before,
+.underline:active:before {
   left: 0;
   right: 0;
+}
+
+#menu-toggle {
+  opacity: 0;
+}
+
+#menu-toggle:checked + .menu-button > span {
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#menu-toggle:checked + .menu-button > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.menu-button {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-button > span,
+.menu-button > span::before,
+.menu-button > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: 0.25s;
+}
+
+.menu-button > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu-button > span::after {
+  content: "";
+  top: 8px;
 }
 
 /* RESPONSIVE */
@@ -136,7 +188,8 @@ html {
     background-color: var(--bg-primary-color);
   }
 
-  .nav-responsive {
+  .nav-responsive,
+  .hamburger-menu {
     display: block;
     box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
   }
@@ -193,6 +246,7 @@ html {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    margin-top: 3px;
   }
 
   .menu:before,
