@@ -69,6 +69,7 @@ html {
   z-index: 200;
   transition: all 0.6s;
   backdrop-filter: blur(10px);
+  /* TODO: Fix blur in mobile / some browsers */
 }
 
 .header-container header {
@@ -221,7 +222,6 @@ html {
   align-items: center;
   display: flex;
   flex-direction: row;
-  column-gap: 1rem;
   text-align: left;
 }
 
@@ -263,7 +263,7 @@ html {
 .info-text {
   font-size: 1.15rem;
   font-weight: 500;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   color: var(--contrast-color);
   line-height: 1.5;
 }
@@ -281,7 +281,7 @@ html {
 .social-media {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
   justify-content: flex-start;
   flex-wrap: wrap;
   list-style: none;
@@ -295,7 +295,7 @@ html {
   padding-left: 1rem;
   padding-right: 1rem;
   color: var(--contrast-color);
-  border-radius: 500px;
+  border-radius: 1rem;
   border: 1px solid rgb(203 213 225);
   column-gap: 0.5rem;
   justify-content: center;
@@ -315,22 +315,22 @@ html {
   height: 1.5rem;
 }
 
+.cv {
+  font-weight: 700;
+}
+
 /*#endregion */
 
 /*#region EXPERIENCE*/
 
 .experience {
-  padding-top: 4.5rem;
-}
-
-.experience-title {
-  margin-top: 2rem;
+  padding-top: 5.5rem;
 }
 
 .experience-container {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   width: 100%;
   max-width: 1536px;
 }
@@ -371,7 +371,6 @@ html {
 .experience-info {
   padding-top: 7px;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  padding-bottom: 3rem;
   display: grid;
   margin-left: 1rem;
   position: relative;
@@ -421,6 +420,156 @@ html {
 
 /*#endregion*/
 
+/*#region PROJECTS */
+
+.projects {
+  padding-top: 3rem;
+}
+
+.project-list {
+  margin-top: 2.5rem;
+  row-gap: 3rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.project {
+  flex-direction: row;
+  display: flex;
+}
+
+.project-img {
+  width: 45%;
+}
+
+.img-border {
+  border-width: 1px;
+  border-color: var(--contrast-color);
+  border-radius: 1rem;
+  overflow: clip;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+.img-border img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.project-info {
+  width: 55%;
+  margin-right: 30px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  line-height: 2rem;
+}
+
+.project-container {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.project-stack {
+  column-gap: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  list-style: none;
+  margin: 0;
+}
+
+.project-stack li span {
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #000000;
+  border-radius: 0.65rem;
+  column-gap: 0.5rem;
+  display: flex;
+}
+
+.project-text {
+  color: var(--contrast-color);
+  margin-top: 0.5rem;
+}
+
+.project-buttons {
+  column-gap: 1rem;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.project-buttons a {
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.7rem;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  display: inline-flex;
+  text-decoration: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.project-buttons a:first-child {
+  background-color: var(--detail-color);
+}
+
+.project-buttons a:first-child:hover {
+  background-color: #652ce0;
+}
+
+.project-buttons a:nth-child(2) {
+  background-color: var(--contrast-color);
+}
+
+.project-buttons a:nth-child(2):hover {
+  background-color: #273342;
+}
+
+.more-projects {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
+.more-container {
+  color: #111;
+  text-decoration: none;
+  cursor: pointer;
+  padding-bottom: 1px;
+  padding-left: 3px;
+  padding-right: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.more-projects svg {
+  display: block;
+  margin-left: 5px;
+}
+
+/*#endregion */
+
 /*#region RESPONSIVE */
 
 @media screen and (max-width: 1000px) {
@@ -441,8 +590,25 @@ html {
     width: 80%;
   }
 
-  .experience {
+  .experience, .projects {
     width: 80%;
+  }
+
+  .project {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  .project-info, .project-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-info {
+    margin-top: 1rem;
+    padding-left: 3px;
+    margin-bottom: 20px;
   }
 }
 
@@ -461,7 +627,7 @@ html {
 @media screen and (max-width: 750px) {
   .home {
     padding: 0;
-    padding-top: 10rem;
+    padding-top: 8rem;
   }
 
   .info {
@@ -571,10 +737,12 @@ html {
 }
 
 @media screen and (max-width: 640px) {
-
-  .info{
-    width: 80%;
+  .info {
+    width: 90%;
     margin-left: 0;
+  }
+  .experience, .projects {
+    width: 90%;
   }
 }
 
