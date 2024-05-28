@@ -35,6 +35,10 @@ html {
   );
 }
 
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /*#region GENERIC */
 
 .purple {
@@ -61,15 +65,15 @@ html {
 /*#region HEADER */
 
 .header-container {
-  background: transparent;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 200;
   transition: all 0.6s;
+  background-color: transparent;
   backdrop-filter: blur(10px);
-  /* TODO: Fix blur in mobile / some browsers */
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .header-container header {
@@ -98,7 +102,6 @@ html {
 }
 
 .header-container header nav ul li a {
-  text-align: none;
   color: var(--contrast-color);
   transition: 0.25s;
   text-decoration: none;
@@ -106,6 +109,7 @@ html {
   font-weight: 500;
   color: var(--contrast-color);
   padding: 3px;
+  user-select: none;
 }
 
 .header-container header nav ul li a:hover {
@@ -590,7 +594,8 @@ html {
     width: 80%;
   }
 
-  .experience, .projects {
+  .experience,
+  .projects {
     width: 80%;
   }
 
@@ -599,7 +604,8 @@ html {
     display: flex;
   }
 
-  .project-info, .project-img {
+  .project-info,
+  .project-img {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -651,13 +657,12 @@ html {
     position: absolute;
     right: 0;
     top: 70px;
-    background-color: transparent;
     width: 100%;
   }
 
   nav.responsive ul {
     display: block !important;
-    backdrop-filter: blur(10px);
+    background-color: white;
   }
 
   nav.responsive ul li {
@@ -741,7 +746,8 @@ html {
     width: 90%;
     margin-left: 0;
   }
-  .experience, .projects {
+  .experience,
+  .projects {
     width: 90%;
   }
 }
