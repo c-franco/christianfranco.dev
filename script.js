@@ -1,5 +1,10 @@
 let menuVisible = false;
 
+window.onload = function () {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").innerHTML = currentYear;
+};
+
 function showHideMenu() {
   const nav = document.getElementById("nav");
   const header = document.getElementById("header");

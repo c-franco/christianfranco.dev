@@ -574,6 +574,87 @@ a {
 
 /*#endregion */
 
+/*#region ABOUT ME */
+
+.about-me {
+  padding-top: 3.5rem;
+}
+
+.about-me-container {
+  margin-top: 25px;
+  flex-direction: row;
+  gap: 3.2rem;
+  justify-content: center;
+  display: flex;
+}
+
+.about-me-text {
+  order: 1;
+}
+
+.about-me-text p {
+  margin-bottom: 1rem;
+}
+
+.about-me-stack {
+  order: 2;
+}
+
+.stack-list {
+  margin-top: 7px;
+  display: flex;
+  gap: 1.4rem;
+  list-style: none;
+}
+
+.stack-list li svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.stack-card {
+  padding: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  border-radius: 0.65rem;
+  z-index: 1;
+  background-image: linear-gradient(to top right, white, rgb(248, 247, 247));
+  border: 1px solid rgb(203 213 225);
+  box-shadow: 0 1px 1px rgba(85, 84, 84, 0.1);
+}
+
+.stack-card:nth-child(2),
+.stack-card:nth-child(3) {
+  margin-top: 0.5rem;
+}
+
+.stack-list li {
+  position: relative;
+  display: inline-block;
+}
+
+.stack-list li .tooltiptext {
+  visibility: hidden;
+  font-size: 0.9rem;
+  width: 110px;
+  top: 100%;
+  left: 50%;
+  margin-left: -55px;
+  background-color: var(--contrast-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.stack-list li:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*#endregion */
+
 /*#region RESPONSIVE */
 
 @media screen and (max-width: 1000px) {
@@ -595,7 +676,8 @@ a {
   }
 
   .experience,
-  .projects {
+  .projects,
+  .about-me {
     width: 80%;
   }
 
@@ -615,6 +697,25 @@ a {
     margin-top: 1rem;
     padding-left: 3px;
     margin-bottom: 20px;
+  }
+
+  .about-me-container {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .stack-card {
+    display: flex;
+    align-items: center;
+  }
+
+  .stack-card span {
+    margin-right: 2rem;
+  }
+
+  .stack-list li svg {
+    width: 2.2rem;
+    height: 2.2rem;
   }
 }
 
@@ -747,8 +848,20 @@ a {
     margin-left: 0;
   }
   .experience,
-  .projects {
+  .projects,
+  .about-me {
     width: 90%;
+  }
+
+  .stack-card span {
+    margin-right: 0.5rem;
+  }
+
+  .stack-card {
+    display: block;
+  }
+  .about-me-container {
+    gap: 2.9rem;
   }
 }
 
