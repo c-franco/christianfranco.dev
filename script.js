@@ -55,8 +55,21 @@ function scrollToTop() {
 
 function showLanguageMenu() {
   const languageOptions = document.getElementById("language-options");
-  languageOptions.style.display =
-    languageOptions.style.display === "flex" ? "none" : "flex";
+  if (languageOptions.classList.contains("show")) {
+    setTimeout(function () {
+      languageOptions.classList.remove("show");
+      languageOptions.classList.add("hide");
+    }, 10);
+    setTimeout(function () {
+      languageOptions.style.display = "none";
+    }, 110);
+  } else {
+    languageOptions.style.display = "flex";
+    setTimeout(function () {
+      languageOptions.classList.remove("hide");
+      languageOptions.classList.add("show");
+    }, 10);
+  }
 }
 
 function changeLanguage(langCode) {

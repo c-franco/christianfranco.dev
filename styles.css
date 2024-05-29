@@ -222,11 +222,13 @@ a {
   position: absolute;
   border-radius: 0.65rem;
   border: 1px solid rgb(203 213 225);
-  transform: translate(-38%);
+  transform: translateX(-38%);
   margin-top: 2px;
   background-image: linear-gradient(to top right, white, rgb(243, 242, 242));
   box-shadow: 0 4px 3px rgba(85, 84, 84, 0.1);
   z-index: 5;
+  transition: opacity 0.15s ease-in;
+  opacity: 0;
 }
 
 #language-options > span {
@@ -235,6 +237,16 @@ a {
 
 #language-options a {
   padding: 6px 12px;
+}
+
+#language-options.show {
+  opacity: 1;
+  
+}
+
+#language-options.hide {
+  opacity: 0;
+  display: none;
 }
 
 /*#endregion */
