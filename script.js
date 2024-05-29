@@ -23,7 +23,8 @@ function showHideMenu() {
   }
 }
 
-function selectMenuItem() {
+function selectMenuItem(section) {
+  scrollFunction(section);
   const nav = document.getElementById("nav");
   const header = document.getElementById("header");
   nav.classList.remove("responsive");
@@ -33,4 +34,19 @@ function selectMenuItem() {
   let checkbox = document.getElementById("menu-toggle");
   checkbox.checked = false;
   menuVisible = false;
+}
+
+function scrollFunction(section) {
+  const nav = document.querySelector("nav");
+  const yOffset = -nav.offsetHeight + 1;
+  const element = document.getElementById(section);
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  window.scrollTo({ top: y, behavior: "smooth" });
+}
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
