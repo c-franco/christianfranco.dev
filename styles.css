@@ -207,26 +207,34 @@ a {
   top: 8px;
 }
 
-#language-selector {
+.change-language svg {
+  height: 16px;
+  width: 16px;
+  fill: var(--contrast-color);
+  margin-top: 7px;
   cursor: pointer;
-  color: var(--contrast-color);
-  text-decoration: none;
-  font-family: Onest, sans-serif;
-  font-weight: 500;
-  user-select: none;
-  background-color: transparent;
-  border: none;
-  margin-top: 5px;
-  font-size: 1rem;
 }
 
-#language-selector option {
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: #f8f9fa;
-  color: var(--contrast-color);
-  cursor: pointer;
-  font-family: Onest, sans-serif;
+#language-options {
+  background-color: var(--bg-second-color);
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 0.65rem;
+  border: 1px solid rgb(203 213 225);
+  transform: translate(-38%);
+  margin-top: 2px;
+  background-image: linear-gradient(to top right, white, rgb(243, 242, 242));
+  box-shadow: 0 4px 3px rgba(85, 84, 84, 0.1);
+  z-index: 5;
+}
+
+#language-options > span {
+  border: 1px solid rgba(203, 213, 225, 0.432);
+}
+
+#language-options a {
+  padding: 6px 12px;
 }
 
 /*#endregion */

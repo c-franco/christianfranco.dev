@@ -53,11 +53,14 @@ function scrollToTop() {
   });
 }
 
-function changeLanguage() {
-  const languageSelector = document.getElementById("language-selector");
-  const selectedLanguage = languageSelector.value;
+function showLanguageMenu() {
+  const languageOptions = document.getElementById("language-options");
+  languageOptions.style.display =
+    languageOptions.style.display === "flex" ? "none" : "flex";
+}
 
-  if (selectedLanguage === "es") {
+function changeLanguage(langCode) {
+  if (langCode === "es") {
     window.location.href = "es.html";
   } else {
     window.location.href = "/";
