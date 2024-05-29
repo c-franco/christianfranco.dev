@@ -107,17 +107,12 @@ a {
   text-decoration: none;
   font-family: Onest, sans-serif;
   font-weight: 500;
-  color: var(--contrast-color);
   user-select: none;
 }
 
 .header-container header nav ul li a:hover {
   color: var(--contrast-color);
   cursor: pointer;
-}
-
-.change-language {
-
 }
 
 .pad-bottom {
@@ -210,6 +205,28 @@ a {
 .menu-button > span::after {
   content: "";
   top: 8px;
+}
+
+#language-selector {
+  cursor: pointer;
+  color: var(--contrast-color);
+  text-decoration: none;
+  font-family: Onest, sans-serif;
+  font-weight: 500;
+  user-select: none;
+  background-color: transparent;
+  border: none;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+#language-selector option {
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f8f9fa;
+  color: var(--contrast-color);
+  cursor: pointer;
+  font-family: Onest, sans-serif;
 }
 
 /*#endregion */
@@ -434,7 +451,7 @@ a {
 /*#region PROJECTS */
 
 .projects {
-  padding-top: 3rem;
+  padding-top: 3.5rem;
 }
 
 .project-list {
@@ -593,6 +610,10 @@ a {
   width: 1rem;
   height: 1rem;
 }
+
+/*#endregion */
+
+/*#region MORE PROJECTS*/
 
 /*#endregion */
 

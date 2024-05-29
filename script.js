@@ -2,7 +2,9 @@ let menuVisible = false;
 
 window.onload = function () {
   const currentYear = new Date().getFullYear();
-  document.getElementById("currentYear").innerHTML = currentYear;
+  //document.getElementById("currentYear").innerHTML = currentYear;
+
+  //TODO: Implement automatic language detection
 };
 
 function showHideMenu() {
@@ -49,4 +51,15 @@ function scrollToTop() {
     top: 0,
     behavior: "smooth",
   });
+}
+
+function changeLanguage() {
+  const languageSelector = document.getElementById("language-selector");
+  const selectedLanguage = languageSelector.value;
+
+  if (selectedLanguage === "es") {
+    window.location.href = "es.html";
+  } else {
+    window.location.href = "/";
+  }
 }
