@@ -108,13 +108,20 @@ a {
   font-family: Onest, sans-serif;
   font-weight: 500;
   color: var(--contrast-color);
-  padding: 3px;
   user-select: none;
 }
 
 .header-container header nav ul li a:hover {
   color: var(--contrast-color);
   cursor: pointer;
+}
+
+.change-language {
+
+}
+
+.pad-bottom {
+  padding: 3px;
 }
 
 .nav-responsive,
