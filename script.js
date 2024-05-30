@@ -1,20 +1,20 @@
 let menuVisible = false;
 
+if (!sessionStorage.getItem("langRedirected")) {
+  const userLang = navigator.language || navigator.userLanguage;
+
+  if (userLang.startsWith("es")) {
+    window.location.href = "es";
+  } else {
+    window.location.href = "/";
+  }
+
+  sessionStorage.setItem("langRedirected", "true");
+}
+
 window.onload = function () {
   const currentYear = new Date().getFullYear();
-  //document.getElementById("currentYear").innerHTML = currentYear;
-
-  if (!sessionStorage.getItem("langRedirected")) {
-    const userLang = navigator.language || navigator.userLanguage;
-
-    if (userLang.startsWith("es")) {
-      window.location.href = "es";
-    } else {
-      window.location.href = "/";
-    }
-
-    sessionStorage.setItem("langRedirected", "true");
-  }
+  document.getElementById("currentYear").innerHTML = currentYear;
 };
 
 function showHideMenu() {
