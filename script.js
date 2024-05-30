@@ -89,3 +89,7 @@ function changeLanguage(langCode) {
     window.location.href = "/";
   }
 }
+
+function redirect(location) {
+  window.location.href = location;
+}

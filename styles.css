@@ -586,19 +586,19 @@ a {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
-.project-buttons a:first-child {
+.preview {
   background-color: var(--detail-color);
 }
 
-.project-buttons a:first-child:hover {
+.preview:hover {
   background-color: #652ce0;
 }
 
-.project-buttons a:nth-child(2) {
+.code {
   background-color: var(--contrast-color);
 }
 
-.project-buttons a:nth-child(2):hover {
+.code:hover {
   background-color: #273342;
 }
 
@@ -633,6 +633,44 @@ a {
 /*#endregion */
 
 /*#region MORE PROJECTS*/
+
+.projects-data {
+  font-size: 0.9rem;
+  margin-top: 4.5rem;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.repos {
+  color: var(--contrast-color);
+  display: flex;
+  width: 100%;
+  justify-content: left;
+}
+
+.repos svg {
+  margin-right: 7px;
+}
+
+.view-github {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  justify-content: right;
+  text-decoration: none;
+  color: var(--contrast-color);
+}
+
+.view-github div svg {
+  margin-left: 5px;
+  transform: rotate(-45deg);
+}
+
+.portfolio {
+  width: 100%;
+  padding-bottom: 1.25rem;
+}
 
 /*#endregion */
 
@@ -723,7 +761,7 @@ a {
   justify-content: center;
   display: flex;
   margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -909,7 +947,6 @@ a {
     display: block !important;
     background-color: white;
     box-shadow: 0 4px 3px rgba(85, 84, 84, 0.1);
-
   }
 
   nav.responsive ul li {
