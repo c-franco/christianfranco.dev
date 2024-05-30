@@ -207,12 +207,23 @@ a {
   top: 8px;
 }
 
+.lang-hover {
+  cursor: pointer;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 9999px;
+  transition: background-color 0.15s ease;
+}
+
+.lang-hover:hover {
+  background-color: var(--fade-color);
+}
+
 .change-language svg {
   height: 16px;
   width: 16px;
   fill: var(--contrast-color);
   margin-top: 7px;
-  cursor: pointer;
 }
 
 #language-options {
@@ -222,7 +233,7 @@ a {
   position: absolute;
   border-radius: 0.65rem;
   border: 1px solid rgb(203 213 225);
-  transform: translateX(-38%);
+  transform: translateX(-35%);
   margin-top: 2px;
   background-image: linear-gradient(to top right, white, rgb(243, 242, 242));
   box-shadow: 0 4px 3px rgba(85, 84, 84, 0.1);
@@ -1038,6 +1049,10 @@ a {
 
   .separator {
     display: none;
+  }
+
+  .lang-hover:hover {
+    background-color: white;
   }
 }
 
