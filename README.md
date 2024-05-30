@@ -9,11 +9,11 @@
         Website
     </a>
     <span>&nbsp;-&nbsp;</span>
-    <a href="https://github.com/pheralb/pheralb.dev?tab=readme-ov-file#-contributing">
+    <a href="https://www.linkedin.com/in/christian-franco-soto/">
         LinkedIn
     </a>
     <span>&nbsp;-&nbsp;</span>
-    <a href="https://github.com/c-franco/christianfranco.dev?tab=readme-ov-file#stack">
+    <a href="https://github.com/c-franco/christianfranco.dev?tab=readme-ov-file#-stack">
         Stack
     </a>
     <span>&nbsp;-&nbsp;</span>
