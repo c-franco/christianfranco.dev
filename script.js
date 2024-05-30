@@ -8,7 +8,7 @@ window.onload = function () {
     const userLang = navigator.language || navigator.userLanguage;
 
     if (userLang.startsWith("es")) {
-      window.location.href = "es.html";
+      window.location.href = "es";
     } else {
       window.location.href = "/";
     }
@@ -84,7 +84,7 @@ function showLanguageMenu() {
 
 function changeLanguage(langCode) {
   if (langCode === "es") {
-    window.location.href = "es.html";
+    window.location.href = "es";
   } else {
     window.location.href = "/";
   }
