@@ -30,6 +30,7 @@
           <ul>
             <li>
               <a
+                href="#experience"
                 class="underline pad-bottom"
                 onclick="selectMenuItem('experience')"
                 >Experiencia</a
@@ -37,6 +38,7 @@
             </li>
             <li>
               <a
+                href="#projects"
                 class="underline pad-bottom"
                 onclick="selectMenuItem('projects')"
                 >Proyectos</a
@@ -44,6 +46,7 @@
             </li>
             <li>
               <a
+                href="#about-me"
                 class="underline pad-bottom"
                 onclick="selectMenuItem('about-me')"
                 >Sobre mí</a
@@ -72,7 +75,12 @@
           </ul>
         </nav>
         <div class="hamburger-menu">
-          <input id="menu-toggle" type="checkbox" onclick="showHideMenu()" />
+          <input
+            id="menu-toggle"
+            type="checkbox"
+            onclick="showHideMenu()"
+            aria-label="Alternar menú"
+          />
           <label class="menu-button" for="menu-toggle">
             <span></span>
           </label>
@@ -98,6 +106,7 @@
           <ul class="social-media">
             <li>
               <a
+                aria-label="Perfil de LinkedIn"
                 href="https://www.linkedin.com/in/christian-franco-soto/"
                 target="_blank"
               >
@@ -117,7 +126,11 @@
               </a>
             </li>
             <li>
-              <a href="https://github.com/c-franco" target="_blank">
+              <a
+                aria-label="Perfil de GitHub"
+                href="https://github.com/c-franco"
+                target="_blank"
+              >
                 <svg
                   viewBox="0 0 256 250"
                   width="256"
@@ -133,7 +146,11 @@
               </a>
             </li>
             <li>
-              <a href="mailto:christianfrancosoto@gmail.com" target="_blank">
+              <a
+                aria-label="Envíame un correo"
+                href="mailto:christianfrancosoto@gmail.com"
+                target="_blank"
+              >
                 <svg
                   class="size-4"
                   xmlns="http://www.w3.org/2000/svg"
@@ -683,7 +700,11 @@
         </article>
       </div>
       <div class="more-projects">
-        <a href="/proyectos" class="more-container underline">
+        <a
+          href="/proyectos"
+          class="more-container underline"
+          aria-label="Ver más proyectos"
+        >
           Ver más
           <svg
             width="14"
@@ -1146,6 +1167,7 @@
         <ul class="footer-list">
           <li>
             <a
+              aria-label="Perfil de LinkedIn"
               href="https://www.linkedin.com/in/christian-franco-soto/"
               target="_blank"
             >
@@ -1166,7 +1188,11 @@
             </a>
           </li>
           <li>
-            <a href="https://github.com/c-franco" target="_blank">
+            <a
+              aria-label="Perfil de GitHub"
+              href="https://github.com/c-franco"
+              target="_blank"
+            >
               <svg
                 class="git"
                 viewBox="0 0 256 250"
@@ -1183,7 +1209,11 @@
             </a>
           </li>
           <li>
-            <a href="mailto:christianfrancosoto@gmail.com" target="_blank">
+            <a
+              aria-label="Envíame un correo"
+              href="mailto:christianfrancosoto@gmail.com"
+              target="_blank"
+            >
               <svg
                 class="size-4 mail"
                 xmlns="http://www.w3.org/2000/svg"

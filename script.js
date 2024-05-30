@@ -2,11 +2,10 @@ let menuVisible = false;
 
 if (!sessionStorage.getItem("langRedirected")) {
   const userLang = navigator.language || navigator.userLanguage;
+  const currentPath = window.location.pathname;
 
-  if (userLang.startsWith("es")) {
-    window.location.href = "es";
-  } else {
-    window.location.href = "/";
+  if (userLang.startsWith("es") && !currentPath.includes("proyectos") && !currentPath.includes("projects")) {
+    window.location.href = "/es";  
   }
 
   sessionStorage.setItem("langRedirected", "true");
@@ -36,6 +35,7 @@ function showHideMenu() {
 }
 
 function selectMenuItem(section) {
+  preventDefault();
   scrollFunction(section);
   const nav = document.getElementById("nav");
   const header = document.getElementById("header");
