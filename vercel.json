@@ -10,7 +10,7 @@
       }
       ,
       {
-        "source": "/proyectos",
+        "source": "/es/proyectos",
         "destination": "/proyectos.html"
       }
     ]
