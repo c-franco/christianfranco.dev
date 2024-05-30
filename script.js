@@ -35,7 +35,7 @@ function showHideMenu() {
 }
 
 function selectMenuItem(section) {
-  preventDefault();
+  event.preventDefault();
   scrollFunction(section);
   const nav = document.getElementById("nav");
   const header = document.getElementById("header");
