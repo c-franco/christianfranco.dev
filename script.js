@@ -4,7 +4,17 @@ window.onload = function () {
   const currentYear = new Date().getFullYear();
   //document.getElementById("currentYear").innerHTML = currentYear;
 
-  //TODO: Implement automatic language detection
+  if (!sessionStorage.getItem("langRedirected")) {
+    const userLang = navigator.language || navigator.userLanguage;
+
+    if (userLang.startsWith("es")) {
+      window.location.href = "es.html";
+    } else {
+      window.location.href = "/";
+    }
+
+    sessionStorage.setItem("langRedirected", "true");
+  }
 };
 
 function showHideMenu() {

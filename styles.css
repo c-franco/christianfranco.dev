@@ -990,12 +990,12 @@ a {
   #language-options {
     transform: translateX(0%);
     position: relative;
-    margin-top: 10px;
+    margin-top: 20px;
     border: none;
     background-color: white;
     background-image: none;
     box-shadow: none;
-    gap: 10px;
+    gap: 15px;
   }
 
   .separator {
