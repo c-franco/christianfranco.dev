@@ -23,7 +23,7 @@
 
 </div>
 
-## 📦 Stack
+## 📚 Stack
 
 - [**HTML5**](https://developer.mozilla.org/es/docs/Web/HTML) - Structuring web content.
 - [**CSS3**](https://developer.mozilla.org/es/docs/Web/CSS) - Styling and layout design.
@@ -32,7 +32,7 @@
 - [**Vercel**](https://vercel.com) - Deployment and hosting.
 - [**Visual Studio Code**](https://code.visualstudio.com/) - Code editing and development.
 
-## 💻 Getting Started
+## 🛠️ Getting Started
 
 Follow the steps below to set up and run the project on your local machine.
 Prerequisites
