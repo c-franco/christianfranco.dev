@@ -32,7 +32,7 @@
 - [**Vercel**](https://vercel.com) - Deployment and hosting.
 - [**Visual Studio Code**](https://code.visualstudio.com/) - Code editing and development.
 
-## Getting Started
+## 💻 Getting Started
 
 Follow the steps below to set up and run the project on your local machine.
 Prerequisites
