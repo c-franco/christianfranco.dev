@@ -20,7 +20,6 @@
     <a href="https://github.com/c-franco/christianfranco.dev?tab=readme-ov-file#getting-started">
         Getting Started
     </a>
-
 </div>
 
 ## 📦 Stack
