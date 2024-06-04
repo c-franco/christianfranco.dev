@@ -416,7 +416,7 @@ a {
   left: -0.75rem;
   margin-top: 10px;
   position: absolute;
-  color: rgb(222 243 255);
+  fill: white;
   background-color: var(--detail-color);
 }
 
