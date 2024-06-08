@@ -152,7 +152,6 @@ a {
 }
 
 .underline:hover:before,
-.underline:focus:before,
 .underline:active:before {
   left: 0;
   right: 0;

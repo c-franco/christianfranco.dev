@@ -1,18 +1,16 @@
 {
-    "rewrites": [
-      {
-        "source": "/es",
-        "destination": "/es.html"
-      },
-      {
-        "source": "/projects",
-        "destination": "/projects.html"
-      }
-      ,
-      {
-        "source": "/proyectos",
-        "destination": "/proyectos.html"
-      }
-    ]
-  }
-  
+  "rewrites": [
+    {
+      "source": "/es",
+      "destination": "/es.html"
+    },
+    {
+      "source": "/projects",
+      "destination": "/projects.html"
+    },
+    {
+      "source": "/proyectos",
+      "destination": "/proyectos.html"
+    }
+  ]
+}
