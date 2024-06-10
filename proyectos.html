@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
     <link
@@ -14,12 +18,12 @@
     <title>Proyectos - Christian Franco</title>
   </head>
   <body>
-    <div class="background"></div>
+    <div class="background absolute width100"></div>
 
-    <div id="header" class="header-container">
+    <div id="header" class="header-container width100">
       <header>
         <div class="logo">
-          <img
+          <img class="pointer"
             src="/assets/svg/logo.svg"
             onclick="scrollToTop()"
             alt="Personal logo"
@@ -33,7 +37,7 @@
               >
             </li>
             <li class="change-language" onclick="showLanguageMenu()">
-              <div class="lang-hover">
+              <div class="lang-hover pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -63,7 +67,7 @@
             onclick="showHideMenu()"
             aria-label="Alternar menú"
           />
-          <label class="menu-button" for="menu-toggle">
+          <label class="menu-button pointer" for="menu-toggle">
             <span></span>
           </label>
         </div>
@@ -71,8 +75,8 @@
     </div>
 
     <section id="projects" class="projects section">
-      <div class="projects-data">
-        <span class="repos"
+      <div class="projects-data flex center">
+        <span class="repos flex contrast-color width100"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -90,7 +94,7 @@
         <a
           href="https://github.com/c-franco?tab=repositories"
           target="_blank"
-          class="view-github"
+          class="view-github flex contrast-color width100"
           ><div class="pad-bottom underline">
             Ver en GitHub<svg
               width="14"
@@ -110,12 +114,14 @@
           </div>
         </a>
       </div>
-      <div class="project-list">
-        <article class="project">
+      <div class="project-list flex">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">ShortSnap - Acortador de URLs</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">
+              ShortSnap - Acortador de URLs
+            </h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span class="netcore">
                     <svg
@@ -289,12 +295,12 @@
                   </span>
                 </li>
               </ul>
-              <div class="project-text">
+              <div class="project-text contrast-color">
                 Acortador de enlaces rápido, ligero y de código abierto. Permite
                 acortar, desacortar y realizar un seguimiento de los clics en
                 los enlaces.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="preview"
                   href="https://shortsnap.vercel.app/"
@@ -343,17 +349,19 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/shortsnap.webp" alt="App image" />
             </div>
           </div>
         </article>
 
-        <article class="project">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">CSS Storage - Extensión VSCode</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">
+              CSS Storage - Extensión VSCode
+            </h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span>
                     <svg
@@ -376,12 +384,12 @@
                   </span>
                 </li>
               </ul>
-              <div class="project-text">
+              <div class="project-text contrast-color">
                 Extensión para guardar y reutilizar selectores CSS en cualquier
                 proyecto. Ideal para media queries, animaciones, componentes
                 reutilizables, y más.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="preview"
                   href="https://marketplace.visualstudio.com/items?itemName=Breathink.css-storage"
@@ -430,17 +438,19 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/css-storage.webp" alt="" />
             </div>
           </div>
         </article>
 
-        <article class="project">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">LinkVault - Organizador de URL</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">
+              LinkVault - Organizador de URL
+            </h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span>
                     <svg
@@ -533,12 +543,12 @@
                   </span>
                 </li>
               </ul>
-              <div class="project-text">
+              <div class="project-text contrast-color">
                 Aplicación para Android que simplifica la gestión de tus enlaces
                 y te da acceso instantáneo a ellos con un solo toque. Disponible
                 en Google Play Store.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="preview"
                   href="https://play.google.com/store/apps/details?id=com.breathink.linkvault"
@@ -587,17 +597,17 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/linkvault.webp" alt="" />
             </div>
           </div>
         </article>
 
-        <article class="project">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">Spotify Instant Search</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">Spotify Instant Search</h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span>
                     <svg
@@ -719,12 +729,12 @@
                   </span>
                 </li>
               </ul>
-              <div class="project-text">
-                Buscador instantáneo de canciones de Spotify en un dataset con
-                1 millón de registros. Proporciona opciones de filtrado para encontrar canciones al
-                instante.
+              <div class="project-text contrast-color">
+                Buscador instantáneo de canciones de Spotify en un dataset con 1
+                millón de registros. Proporciona opciones de filtrado para
+                encontrar canciones al instante.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="preview"
                   href="https://sisnet.runasp.net/"
@@ -773,17 +783,17 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/sisnet.webp" alt="" />
             </div>
           </div>
         </article>
 
-        <article class="project">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">christianfranco.dev</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">christianfranco.dev</h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span>
                     <svg
@@ -842,11 +852,11 @@
                   </span>
                 </li>
               </ul>
-              <div class="project-text portfolio">
+              <div class="project-text contrast-color portfolio width100">
                 Mi nuevo portfolio personal para mostrar mi experiencia
                 profesional y proyectos personales.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="code"
                   href="https://github.com/c-franco/christianfranco.dev"
@@ -875,7 +885,7 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/portfolio.webp" alt="" />
             </div>
           </div>
@@ -883,13 +893,13 @@
       </div>
     </section>
 
-    <section class="footer section">
-      <div class="footer-container">
+    <section class="footer flex section">
+      <div class="footer-container flex width100">
         <span id="year"
           >© <span id="currentYear">2024 - </span>
           <a href="https://christianfranco.dev">Christian Franco</a></span
         >
-        <ul class="footer-list">
+        <ul class="footer-list flex">
           <li>
             <a
               href="https://www.linkedin.com/in/christian-franco-soto/"

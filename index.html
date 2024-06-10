@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
     <link
@@ -12,23 +16,37 @@
       sizes="any"
     />
     <title>Christian Franco</title>
-    <meta name="description" content="Full-stack developer based in Spain. +2 years of experience in software development." />
-    <meta name="author" content="Christian Franco">
+    <meta
+      name="description"
+      content="Full-stack developer based in Spain. +2 years of experience in software development."
+    />
+    <meta name="author" content="Christian Franco" />
     <meta property="og:title" content="Christian Franco" />
-    <meta property="og:description" content="Full-stack developer based in Spain. +2 years of experience in software development." />
+    <meta
+      property="og:description"
+      content="Full-stack developer based in Spain. +2 years of experience in software development."
+    />
     <meta property="og:url" content="https://christianfranco.dev/" />
     <meta property="og:site_name" content="Christian Franco" />
-    <meta property="og:image" content="https://christianfranco.dev/assets/img/og-image.png" />
+    <meta
+      property="og:image"
+      content="https://christianfranco.dev/assets/img/og-image.png"
+    />
     <meta property="og:type" content="website" />
-    <meta name="twitter:image" content="https://christianfranco.dev/assets/img/og-image.png">
+    <meta
+      name="twitter:image"
+      content="https://christianfranco.dev/assets/img/og-image.png"
+    />
   </head>
-  <body>
-    <div class="background"></div>
 
-    <div id="header" class="header-container">
+  <body>
+    <div class="background absolute width100"></div>
+
+    <div id="header" class="header-container width100">
       <header>
         <div class="logo">
           <img
+            class="pointer"
             src="/assets/svg/logo.svg"
             onclick="scrollToTop()"
             alt="Personal logo"
@@ -61,7 +79,7 @@
               >
             </li>
             <li class="change-language" onclick="showLanguageMenu()">
-              <div class="lang-hover">
+              <div class="lang-hover pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -75,7 +93,7 @@
                 </svg>
               </div>
               <div id="language-options">
-                <a><span class="purple">English</span></a>
+                <a href="/"><span class="purple">English</span></a>
                 <span class="separator"></span>
                 <a href="/es" onclick="changeLanguage('es')"
                   ><span>Spanish</span></a
@@ -91,29 +109,29 @@
             onclick="showHideMenu()"
             aria-label="Menu toggle"
           />
-          <label class="menu-button" for="menu-toggle">
+          <label class="menu-button pointer" for="menu-toggle">
             <span></span>
           </label>
         </div>
       </header>
     </div>
 
-    <section class="home">
-      <div class="home-text">
-        <div class="info-image">
+    <section class="home flex pad05">
+      <div class="home-text flex center">
+        <div class="info-image flex">
           <img src="/assets/img/profile.png" alt="" />
         </div>
         <header class="info">
-          <h1 class="info-title">
+          <h1 class="info-title contrast-color">
             Hey, I'm <span class="purple">Christian Franco</span>
           </h1>
           <span class="info-subtitle">Full-Stack Developer</span>
-          <h2 class="info-text">
+          <h2 class="info-text contrast-color">
             Software developer with a strong focus on back-end, based in Spain.
             <span class="purple">+2 years of experience</span> and an ongoing
             commitment to growth.
           </h2>
-          <ul class="social-media">
+          <ul class="social-media flex">
             <li>
               <a
                 aria-label="LinkedIn profile"
@@ -191,12 +209,12 @@
       </div>
     </section>
 
-    <section id="experience" class="experience section">
-      <h2 class="experience-title title">Work experience</h2>
-      <article class="experience-container">
-        <ul class="experience-list">
+    <section id="experience" class="experience section pad05">
+      <h2 class="experience-title title contrast-color">Work experience</h2>
+      <article class="experience-container width100 pad05">
+        <ul class="experience-list m0p0">
           <li>
-            <span class="experience-icon">
+            <span class="experience-icon flex absolute center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -214,11 +232,11 @@
               <div class="left-info">
                 <div class="left-container">
                   <h3>Full-Stack Developer</h3>
-                  <h4>Inorca</h4>
-                  <span class="time">August 2023 - Current</span>
+                  <h4 class="contrast-color">Inorca</h4>
+                  <span class="time m0p0">August 2023 - Current</span>
                 </div>
               </div>
-              <div class="right-info">
+              <div class="right-info flex contrast-color">
                 Application and REST API development using .Net Core (C#) for
                 the backend and Angular (TypeScript) for the frontend, using SQL
                 Server and PostgreSQL for database management.
@@ -226,7 +244,7 @@
             </div>
           </li>
           <li>
-            <span class="experience-icon">
+            <span class="experience-icon flex absolute center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -244,11 +262,11 @@
               <div class="left-info">
                 <div class="left-container">
                   <h3>Jr. Software Developer</h3>
-                  <h4>TCSA</h4>
-                  <span class="time">June 2022 - August 2023</span>
+                  <h4 class="contrast-color">TCSA</h4>
+                  <span class="time m0p0">June 2022 - August 2023</span>
                 </div>
               </div>
-              <div class="right-info">
+              <div class="right-info flex contrast-color">
                 Development and maintenance of an economic management web
                 application using C# ASP.NET MVC and SQL Server. Implementation
                 of code improvements, testing and creation of a continuous
@@ -260,14 +278,16 @@
       </article>
     </section>
 
-    <section id="projects" class="projects section">
-      <h2 class="projects-title title">Projects</h2>
-      <div class="project-list">
-        <article class="project">
+    <section id="projects" class="projects section pad05">
+      <h2 class="projects-title title contrast-color">Projects</h2>
+      <div class="project-list flex">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">ShortSnap - Url shortener</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">
+              ShortSnap - Url shortener
+            </h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span class="netcore">
                     <svg
@@ -441,12 +461,12 @@
                   </span>
                 </li>
               </ul>
-              <div class="project-text">
+              <div class="project-text contrast-color">
                 A fast, lightweight, and open-source URL shortener designed for
                 quick and efficient URL management. It allows to short, unshort
                 and track URL clicks.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="preview"
                   href="https://shortsnap.vercel.app/"
@@ -495,17 +515,19 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/shortsnap.webp" alt="App image" />
             </div>
           </div>
         </article>
 
-        <article class="project">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">CSS Storage - VSCode extension</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">
+              CSS Storage - VSCode extension
+            </h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span>
                     <svg
@@ -528,12 +550,12 @@
                   </span>
                 </li>
               </ul>
-              <div class="project-text">
+              <div class="project-text contrast-color">
                 Extension that allows you to save CSS selectors for reuse in any
                 project. Useful for storing media queries, animations, reusable
                 components or whatever you need.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="preview"
                   href="https://marketplace.visualstudio.com/items?itemName=Breathink.css-storage"
@@ -582,17 +604,19 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/css-storage.webp" alt="" />
             </div>
           </div>
         </article>
 
-        <article class="project">
+        <article class="project flex">
           <div class="project-info project-info-right">
-            <h3 class="project-title">LinkVault - Url manager</h3>
-            <div class="project-container">
-              <ul class="project-stack">
+            <h3 class="project-title contrast-color">
+              LinkVault - Url manager
+            </h3>
+            <div class="project-container flex">
+              <ul class="project-stack flex">
                 <li>
                   <span>
                     <svg
@@ -647,17 +671,50 @@
                 </li>
                 <li>
                   <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 6.554 6.555" preserveAspectRatio="xMidYMid"><defs><linearGradient x1="2.983" y1=".53" x2="2.983" y2="4.744" id="A" gradientUnits="userSpaceOnUse"><stop stop-color="#97d9f6" offset="0%"/><stop stop-color="#0f80cc" offset="92.024%"/><stop stop-color="#0f80cc" offset="100%"/></linearGradient></defs><path d="M4.96.29H.847c-.276 0-.5.226-.5.5v4.536c0 .276.226.5.5.5h2.71c-.03-1.348.43-3.964 1.404-5.54z" fill="#0f80cc"/><path d="M4.81.437H.847c-.196 0-.355.16-.355.355v4.205c.898-.345 2.245-.642 3.177-.628A28.93 28.93 0 0 1 4.811.437z" fill="url(#A)"/><path d="M5.92.142c-.282-.25-.623-.15-.96.148l-.15.146c-.576.61-1.1 1.742-1.276 2.607a2.38 2.38 0 0 1 .148.426l.022.1.022.102s-.005-.02-.026-.08l-.014-.04a.461.461 0 0 0-.009-.022c-.038-.087-.14-.272-.187-.352a8.789 8.789 0 0 0-.103.321c.132.242.212.656.212.656s-.007-.027-.04-.12c-.03-.083-.176-.34-.21-.4-.06.22-.083.368-.062.404.04.07.08.2.115.324a7.52 7.52 0 0 1 .132.666l.005.062a6.11 6.11 0 0 0 .015.75c.026.313.075.582.137.726l.042-.023c-.09-.284-.128-.655-.112-1.084.025-.655.175-1.445.454-2.268C4.548 1.938 5.2.94 5.798.464c-.545.492-1.282 2.084-1.502 2.673-.247.66-.422 1.28-.528 1.873.182-.556.77-.796.77-.796s.29-.356.626-.865l-.645.172-.208.092s.53-.323.987-.47c.627-.987 1.31-2.39.622-3.002" fill="#003b57"/></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="64"
+                      height="64"
+                      viewBox="0 0 6.554 6.555"
+                      preserveAspectRatio="xMidYMid"
+                    >
+                      <defs>
+                        <linearGradient
+                          x1="2.983"
+                          y1=".53"
+                          x2="2.983"
+                          y2="4.744"
+                          id="A"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#97d9f6" offset="0%" />
+                          <stop stop-color="#0f80cc" offset="92.024%" />
+                          <stop stop-color="#0f80cc" offset="100%" />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M4.96.29H.847c-.276 0-.5.226-.5.5v4.536c0 .276.226.5.5.5h2.71c-.03-1.348.43-3.964 1.404-5.54z"
+                        fill="#0f80cc"
+                      />
+                      <path
+                        d="M4.81.437H.847c-.196 0-.355.16-.355.355v4.205c.898-.345 2.245-.642 3.177-.628A28.93 28.93 0 0 1 4.811.437z"
+                        fill="url(#A)"
+                      />
+                      <path
+                        d="M5.92.142c-.282-.25-.623-.15-.96.148l-.15.146c-.576.61-1.1 1.742-1.276 2.607a2.38 2.38 0 0 1 .148.426l.022.1.022.102s-.005-.02-.026-.08l-.014-.04a.461.461 0 0 0-.009-.022c-.038-.087-.14-.272-.187-.352a8.789 8.789 0 0 0-.103.321c.132.242.212.656.212.656s-.007-.027-.04-.12c-.03-.083-.176-.34-.21-.4-.06.22-.083.368-.062.404.04.07.08.2.115.324a7.52 7.52 0 0 1 .132.666l.005.062a6.11 6.11 0 0 0 .015.75c.026.313.075.582.137.726l.042-.023c-.09-.284-.128-.655-.112-1.084.025-.655.175-1.445.454-2.268C4.548 1.938 5.2.94 5.798.464c-.545.492-1.282 2.084-1.502 2.673-.247.66-.422 1.28-.528 1.873.182-.556.77-.796.77-.796s.29-.356.626-.865l-.645.172-.208.092s.53-.323.987-.47c.627-.987 1.31-2.39.622-3.002"
+                        fill="#003b57"
+                      />
+                    </svg>
                     SQLite
                   </span>
                 </li>
               </ul>
-              <div class="project-text">
+              <div class="project-text contrast-color">
                 Android app that simplifies the management of your favorite
                 links and gives you instant access to them with just one tap.
                 Avalaible on Google Play Store.
               </div>
-              <footer class="project-buttons">
+              <footer class="project-buttons flex">
                 <a
                   class="preview"
                   href="https://play.google.com/store/apps/details?id=com.breathink.linkvault"
@@ -706,19 +763,19 @@
             </div>
           </div>
           <div class="project-img">
-            <div class="img-border">
+            <div class="img-border flex">
               <img src="/assets/img/linkvault.webp" alt="" />
             </div>
           </div>
         </article>
       </div>
-      <div class="more-projects">
+      <div class="more-projects flex width100">
         <a
           href="/projects"
-          class="more-container underline"
+          class="more-container underline pointer"
           aria-label="View more projects"
         >
-          More
+          More projects
           <svg
             width="14"
             height="14"
@@ -738,9 +795,9 @@
       </div>
     </section>
 
-    <section id="about-me" class="about-me section">
-      <h2 class="about-me-title title">About me</h2>
-      <article class="about-me-container">
+    <section id="about-me" class="about-me section pad05">
+      <h2 class="about-me-title title contrast-color">About me</h2>
+      <article class="about-me-container flex">
         <div class="about-me-text">
           <p>
             Hey! 👋 I'm Christian Franco, I'm 23 years old and I'm a
@@ -768,9 +825,9 @@
         <div class="about-me-stack">
           <div class="stack-card">
             <span>Back-End</span>
-            <ul class="stack-list">
+            <ul class="stack-list flex">
               <li>
-                <span class="tooltiptext">C#</span>
+                <span class="tooltiptext absolute">C#</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="2222"
@@ -801,7 +858,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">.Net Core</span>
+                <span class="tooltiptext absolute">.Net Core</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                   <g fill="#623697">
                     <path
@@ -814,7 +871,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">SQL Server</span>
+                <span class="tooltiptext absolute">SQL Server</span>
                 <svg
                   viewBox="0 0 48 48"
                   xmlns="http://www.w3.org/2000/svg"
@@ -852,7 +909,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">PostgreSQL</span>
+                <span class="tooltiptext absolute">PostgreSQL</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="xMidYMid"
@@ -876,7 +933,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">Java</span>
+                <span class="tooltiptext absolute">Java</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="xMidYMid"
@@ -908,9 +965,9 @@
           </div>
           <div class="stack-card">
             <span>Front-End</span>
-            <ul class="stack-list">
+            <ul class="stack-list flex">
               <li>
-                <span class="tooltiptext">HTML5</span>
+                <span class="tooltiptext absolute">HTML5</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
                   <path fill="#e34f26" d="M41 460L0 0h451l-41 460-185 52" />
                   <path fill="#ef652a" d="M226 472l149-41 35-394H226" />
@@ -925,7 +982,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">CSS3</span>
+                <span class="tooltiptext absolute">CSS3</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 452 520">
                   <path fill="#0c73b8" d="M41 460L0 0h451l-41 460-185 52" />
                   <path fill="#30a9dc" d="M226 472l149-41 35-394H226" />
@@ -940,7 +997,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">Angular</span>
+                <span class="tooltiptext absolute">Angular</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -1003,7 +1060,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">JavaScript</span>
+                <span class="tooltiptext absolute">JavaScript</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="2500"
@@ -1018,7 +1075,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">TypeScript</span>
+                <span class="tooltiptext absolute">TypeScript</span>
                 <svg
                   viewBox="0 0 256 256"
                   width="256"
@@ -1040,9 +1097,9 @@
           </div>
           <div class="stack-card">
             <span>Tools</span>
-            <ul class="stack-list">
+            <ul class="stack-list flex">
               <li>
-                <span class="tooltiptext">Git</span>
+                <span class="tooltiptext absolute">Git</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   preserveAspectRatio="xMidYMid"
@@ -1055,7 +1112,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">Postman</span>
+                <span class="tooltiptext absolute">Postman</span>
                 <svg
                   viewBox="0 0 256 256"
                   width="256"
@@ -1142,7 +1199,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">npm</span>
+                <span class="tooltiptext absolute">npm</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                   <path
                     fill="#cb3837"
@@ -1151,7 +1208,7 @@
                 </svg>
               </li>
               <li>
-                <span class="tooltiptext">Terminal</span>
+                <span class="tooltiptext absolute">Terminal</span>
                 <svg
                   class="size-12 mb-2"
                   width="64"
@@ -1171,13 +1228,13 @@
       </article>
     </section>
 
-    <section class="footer section">
-      <div class="footer-container">
+    <section class="footer flex section pad05">
+      <div class="footer-container flex width100">
         <span id="year"
           >© <span id="currentYear">2024 - </span>
           <a href="https://christianfranco.dev">Christian Franco</a></span
         >
-        <ul class="footer-list">
+        <ul class="footer-list flex">
           <li>
             <a
               aria-label="LinkedIn profile"
