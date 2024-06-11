@@ -17,7 +17,7 @@
         Stack
     </a>
     <span>&nbsp;-&nbsp;</span>
-    <a href="https://github.com/c-franco/christianfranco.dev?tab=readme-ov-file#getting-started">
+    <a href="https://github.com/c-franco/christianfranco.dev?tab=readme-ov-file#%EF%B8%8F-getting-started">
         Getting Started
     </a>
 </div>
