@@ -1,37 +1,27 @@
 let menuVisible = false;
 
-if (!sessionStorage.getItem("langRedirected")) {
-  const userLang = navigator.language || navigator.userLanguage;
-  const currentPath = window.location.pathname;
+const redirectIfNeeded = () => {
+  if (!sessionStorage.getItem("langRedirected")) {
+    const userLang = navigator.language || navigator.userLanguage;
+    const currentPath = window.location.pathname;
 
-  if (userLang.startsWith("es") && !currentPath.includes("proyectos") && !currentPath.includes("projects")) {
-    window.location.href = "/es";  
+    if (userLang.startsWith("es") && !currentPath.includes("proyectos") && !currentPath.includes("projects")) {
+      window.location.href = "/es";  
+    }
+
+    sessionStorage.setItem("langRedirected", "true");
   }
-
-  sessionStorage.setItem("langRedirected", "true");
-}
-
-window.onload = function () {
-  const currentYear = new Date().getFullYear();
-  document.getElementById("currentYear").innerHTML = currentYear;
 };
 
 function showHideMenu() {
   const nav = document.getElementById("nav");
   const header = document.getElementById("header");
-  if (menuVisible) {
-    nav.classList.remove("responsive");
-    header.style.backdropFilter = "blur(10px)";
-    header.style.webkitBackdropFilter = "blur(10px)";
-    header.style.backgroundColor = "transparent";
-    menuVisible = false;
-  } else {
-    nav.classList.add("responsive");
-    header.style.backdropFilter = "none";
-    header.style.webkitBackdropFilter = "none";
-    header.style.backgroundColor = "white";
-    menuVisible = true;
-  }
+  nav.classList.toggle("responsive");
+  const isResponsive = nav.classList.contains("responsive");
+  header.style.backdropFilter = isResponsive ? "none" : "blur(10px)";
+  header.style.webkitBackdropFilter = isResponsive ? "none" : "blur(10px)";
+  header.style.backgroundColor = isResponsive ? "white" : "transparent";
+  menuVisible = isResponsive;
 }
 
 function selectMenuItem(section) {
@@ -56,13 +46,6 @@ function scrollFunction(section) {
   window.scrollTo({ top: y, behavior: "smooth" });
 }
 
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-}
-
 function showLanguageMenu() {
   const languageOptions = document.getElementById("language-options");
   if (languageOptions.classList.contains("show")) {
@@ -82,14 +65,23 @@ function showLanguageMenu() {
   }
 }
 
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function changeLanguage(langCode) {
-  if (langCode === "es") {
-    window.location.href = "es";
-  } else {
-    window.location.href = "/";
-  }
+  const url = langCode === "es" ? "es" : "/";
+  window.location.href = url;
 }
 
 function redirect(location) {
   window.location.href = location;
 }
+
+const updateCurrentYear = () => {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("currentYear").innerHTML = currentYear;
+};
+
+redirectIfNeeded();
+window.onload = updateCurrentYear;
