@@ -41,8 +41,10 @@ function selectMenuItem(section) {
 function scrollFunction(section) {
   const nav = document.querySelector("nav");
   const yOffset = -nav.offsetHeight + 1;
+  const isResponsive = nav.classList.contains("responsive");
+  const responsiveHeight = isResponsive ? 200 : 0;
   const element = document.getElementById(section);
-  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset + responsiveHeight;
   window.scrollTo({ top: y, behavior: "smooth" });
 }
 
