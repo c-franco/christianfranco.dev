@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="icon" href="/assets/svg/logo.svg" type="image/x-icon" sizes="any" />
     <title>Christian Franco</title>
     <meta name="description" content="Software developer from Spain with over 3 years of experience." />
@@ -16,6 +16,9 @@
     <meta property="og:site_name" content="Christian Franco" />
     <meta property="og:image" content="https://christianfranco.dev/assets/img/og-image.png" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Christian Franco" />
+    <meta name="twitter:description" content="Software developer from Spain with over 3 years of experience." />
     <meta name="twitter:image" content="https://christianfranco.dev/assets/img/og-image.png" />
   </head>
   <body>
@@ -29,13 +32,13 @@
         <nav id="nav">
           <ul>
             <li>
-              <a href="#experience" class="underline pad-bottom" onclick="selectMenuItem('experience')">Experience</a>
+              <a href="#experience" class="underline pad-bottom" onclick="selectMenuItem(event, 'experience')">Experience</a>
             </li>
             <li>
-              <a href="#projects" class="underline pad-bottom" onclick="selectMenuItem('projects')">Projects</a>
+              <a href="#projects" class="underline pad-bottom" onclick="selectMenuItem(event, 'projects')">Projects</a>
             </li>
             <li>
-              <a href="#about-me" class="underline pad-bottom" onclick="selectMenuItem('about-me')">About me</a>
+              <a href="#about-me" class="underline pad-bottom" onclick="selectMenuItem(event, 'about-me')">About me</a>
             </li>
             <li class="change-language" onclick="showLanguageMenu()">
               <div class="lang-hover pointer">
@@ -65,9 +68,9 @@
     <section class="home flex pad05">
       <div class="home-text flex center">
         <div class="info-image flex">
-          <img src="/assets/img/profile.png" alt="" />
+          <img src="/assets/img/profile.png" alt="Christian Franco" />
         </div>
-        <header class="info">
+        <div class="info">
           <h1 class="info-title contrast-color">Hey, I'm <span class="purple">Christian Franco</span></h1>
           <span class="info-subtitle">Software Developer</span>
           <h2 class="info-text contrast-color">
@@ -94,7 +97,7 @@
               <a href="/assets/files/CV.pdf" target="_blank">CV</a>
             </li>
           </ul>
-        </header>
+        </div>
       </div>
     </section>
 
@@ -115,7 +118,8 @@
                 </div>
               </div>
               <div class="right-info flex contrast-color">
-            </div>
+                Design and development of the Zivenet Tool platform using C#, contributing to the implementation of key functionalities focused on process management and automation.
+              </div>
           </li>
           <li>
             <span class="experience-icon flex absolute center">
@@ -243,7 +247,7 @@
           </div>
           <div class="project-img">
             <div class="img-border flex">
-              <img src="/assets/img/bankATM.webp" alt="" />
+              <img src="/assets/img/bankATM.webp" alt="Bank ATM app screenshot" />
             </div>
           </div>
         </article>
@@ -279,7 +283,7 @@
           </div>
           <div class="project-img">
             <div class="img-border flex">
-              <img src="/assets/img/css-storage.webp" alt="" />
+              <img src="/assets/img/css-storage.webp" alt="CSS Storage VSCode extension screenshot" />
             </div>
           </div>
         </article>
@@ -402,7 +406,7 @@
 
     <section class="footer flex section pad05">
       <div class="footer-container flex width100">
-        <span id="year">© <span id="currentYear">2024 - </span> <a href="https://christianfranco.dev">Christian Franco</a></span>
+        <span id="year">© <span id="currentYear"></span> <a href="https://christianfranco.dev">Christian Franco</a></span>
         <ul class="footer-list flex">
           <li>
             <a aria-label="LinkedIn profile" href="https://www.linkedin.com/in/christian-franco-soto/" target="_blank">

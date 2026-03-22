@@ -24,7 +24,7 @@ function showHideMenu() {
   menuVisible = isResponsive;
 }
 
-function selectMenuItem(section) {
+function selectMenuItem(event, section) {
   event.preventDefault();
   scrollFunction(section);
   const nav = document.getElementById("nav");
